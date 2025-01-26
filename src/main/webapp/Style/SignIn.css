@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    transition: background-color 0.3s, color 0.3s;
+    color: #333;
+}
+
+/* Main Container */
+.main-container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Left Side */
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.left-side h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.left-side p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.left-side .food-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Side */
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-card {
+    width: 100%;
+    max-width: 480px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Logo Text before Sign In */
+.meal-dash-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.meal-dash-logo h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #ff6f61;
+}
+
+.input-group input,
+.input-group textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+.toggle-password {
+    cursor: pointer;
+    color: #ff6f61;
+}
+
+/* Sign In Button */
+.signin-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1%;
+}
+
+.signin-btn:hover {
+    background: #e55b4c;
+}
+/* Dark Mode Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    text-align: center;
+    white-space: nowrap; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+    background-color: #e55b4c;
+}
+
+
+
+
+
+
+/* Dark Theme */
+body.dark-theme {
+    background: #121212;
+    color: #fff;
+}
+
+body.dark-theme .signin-card {
+    background: rgba(40, 40, 40, 0.9);
+}
+
+body.dark-theme .signin-btn,
+body.dark-theme .theme-toggle {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+/* Responsive Design for Mobile and Tablets */
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left-side {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .left-side h1 {
+        font-size: 2.5rem;
+    }
+
+    .signin-card {
+        max-width: 90%;
+        height: auto;
+        padding: 25px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+    }
+
+    .signin-btn {
+        font-size: 0.9rem;
+    }
+
+    .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .signin-card {
+        max-width: 80%;
+    }
+
+    .signin-btn {
+        font-size: 1.1rem;
+    }
+
+    .theme-toggle {
+        bottom: 30px;
+    }
+}
